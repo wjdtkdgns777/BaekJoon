@@ -4,7 +4,7 @@
 
 using namespace std;
 
-char arr[51][51];
+
 int n, hap = 1;
 
 void solve()
@@ -55,6 +55,8 @@ int main()
     int count = 1;
     
     cin >> n;
+    vector<char> a(n);
+
 
     for (i = 0; i < n; i++) {
         for (j = 0; j < n; j++) {

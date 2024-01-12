@@ -6,8 +6,8 @@ def find_constructor(N):
         digit_sum = 0
         number = i
         while number > 0:
-            number, digit = divmod(number, 10)
-            digit_sum += digit
+            digit_sum += number % 10
+            number //= 10
         if i + digit_sum == N:
             return i
     return 0

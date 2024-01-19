@@ -1,20 +1,20 @@
 T = int(input())
 
-for _ in range(T):
-    ps = input()
-    stack = []
-    is_vps = True
+for _ in range (T):
+  ps = input()
+  stack = []
+  is_valid = True
+  
+  for ch in ps:
+    if ch == '(':
+      stack.append(ch)
+    else:
+      if not stack:
+        is_valid = False
+        break
+      stack.pop()
 
-    for ch in ps:
-        if ch == '(':
-            stack.append(ch)
-        elif ch == ')':
-            if not stack:
-                is_vps = False
-                break
-            stack.pop()
-
-    if stack:
-        is_vps = False
-
-    print("YES" if is_vps else "NO")
+  if stack or not is_valid:
+    print("NO")
+  else:
+    print("YES")
